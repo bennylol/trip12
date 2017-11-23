@@ -1,0 +1,2 @@
+env:
+  SUGGEST_REQUEST_URL: 'https://www.onetwotrip.com/_hotels/api/suggestRequest'
