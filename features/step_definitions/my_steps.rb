@@ -25,3 +25,9 @@ When(/^"([^"]*)" массив ответа содержит данные:$/) do 
     assert_equal(json['result'][array.to_i-1][value[0]], value[1])
   end
 end
+
+When(/^структура JSON соответствует ожидаемой$/) do
+  json = JSON.parse(@response.body)
+  json_schema = IO.read('suggest_schema.json')
+  assert_true JSON::Validator.validate(json_schema, json)
+end

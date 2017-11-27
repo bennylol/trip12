@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "NilClass"
+    },
+    "result": {
+      "type": "Array",
+      "properties": {
+        "required": ["timezone", "country_code", "type"]
+      }
+    }
+  },
+  "required": ["error", "result"]
+}
